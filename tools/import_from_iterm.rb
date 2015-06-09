@@ -59,7 +59,7 @@ end
 # Now, we need to collect other data: background color, foreground color, and bold color
 
 ['Background Color', 'Foreground Color', 'Bold Color'].each do |label|
-  data  = plist[label]
+  data  = plist[label] || {}
   colors[label] = Color.new(
     red: data['Red Component'],
     green: data['Green Component'],
